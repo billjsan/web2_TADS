@@ -132,7 +132,5 @@ public class Lutador {
     public double getImc(){
         return this.peso/(this.altura*this.altura);
     }
-    
-    
-    
+
 }
