@@ -7,6 +7,7 @@
 <%@page import="com.devcaotics.model.negocios.Local"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="ifpe" uri="recife.ifpe.edu.br.willian.tags" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -17,6 +18,12 @@
     </head>
     <body>
         <h1>LocaisCadastrados</h1>
+        
+        <ifpe:carrega classe="locais" var="loc"/>
+        ${loc.size()}
+        
+        <ifpe:carregaum classe="locais" var="local" indice="0"/>
+        ${local.toString()}
         
         <%
             String mensagem = request.getParameter("msg");

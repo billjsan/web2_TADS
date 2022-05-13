@@ -18,12 +18,18 @@
     </head>
     <body>
         <h1>Lutadores Cadastrados</h1>
+        
+        <ifpe:carrega classe="lutadores" var="lut"/>
+        <h3>teste carrega size: ${lut.size()}</h3>
+         
+        <ifpe:carregaum classe="lutadores" var="lutador" indice="100"/>    
+        <h3>teste carregaUm: ${lutador.toString()}</h3>
+    
         <div>
         <a href="CadastroLutador.jsp">Adicionar Lutador</a>      
         </div>
         <%
             String mensagem = request.getParameter("msg");
-            
             if(mensagem != null){
         %>
         <h3><%= mensagem %></h3>  

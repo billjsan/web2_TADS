@@ -133,4 +133,9 @@ public class Lutador {
         return this.peso/(this.altura*this.altura);
     }
 
+    @Override
+    public String toString() {
+        return nome; 
+    }
+ 
 }

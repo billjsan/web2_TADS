@@ -3,6 +3,7 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import com.devcaotics.controllers.servlets.LutadorServlet;
 import com.devcaotics.model.negocios.Lutador;
 import java.util.List;
 
@@ -12,6 +13,11 @@ public final class Lutadores_jsp extends org.apache.jasper.runtime.HttpJspBase
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
 
   private static java.util.List<String> _jspx_dependants;
+
+  static {
+    _jspx_dependants = new java.util.ArrayList<String>(1);
+    _jspx_dependants.add("/WEB-INF/tlds/MyTags.tld");
+  }
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
@@ -48,6 +54,9 @@ public final class Lutadores_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
@@ -55,8 +64,27 @@ public final class Lutadores_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <title>JSP Page</title>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("        <h1>LocaisCadastrados</h1>\n");
+      out.write("        <h1>Lutadores Cadastrados</h1>\n");
       out.write("        \n");
+      out.write("        ");
+      if (_jspx_meth_ifpe_carrega_0(_jspx_page_context))
+        return;
+      out.write("\n");
+      out.write("        <h3>teste carrega size: ");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lut.size()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("</h3>\n");
+      out.write("         \n");
+      out.write("        ");
+      if (_jspx_meth_ifpe_carregaum_0(_jspx_page_context))
+        return;
+      out.write("\n");
+      out.write("        <h3>teste carregaUm: ");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lutador.toString()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("</h3>\n");
+      out.write("        \n");
+      out.write("        <div>\n");
+      out.write("        <a href=\"CadastroLutador.jsp\">Adicionar Lutador</a>      \n");
+      out.write("        </div>\n");
       out.write("        ");
 
             String mensagem = request.getParameter("msg");
@@ -66,76 +94,21 @@ public final class Lutadores_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("        <h3>");
       out.print( mensagem );
-      out.write("</h3>\n");
+      out.write("</h3>  \n");
       out.write("        ");
 
             }    
         
       out.write("\n");
-      out.write("        \n");
       out.write("        ");
 
             List<Lutador> lutadores = (List)request.getAttribute("lutadores");
         
       out.write("\n");
-      out.write("        \n");
-      out.write("        <table border=\"1\">\n");
-      out.write("            <tr>\n");
-      out.write("                <th>id</th><th>Nome</th><th>Apelido</th><th>Altura</th>\n");
-      out.write("                <th>Arte Marcial</th><th>Contato de Emergência</th>\n");
-      out.write("                <th>Curso</th><th>IMC</th><th>Nascimento</th><th>Peso</th>\n");
-      out.write("            </tr>\n");
-      out.write("            \n");
-      out.write("            ");
- 
-                for(Lutador lAux: lutadores){
-            
+      out.write("        ");
+      if (_jspx_meth_ifpe_tabela_0(_jspx_page_context))
+        return;
       out.write("\n");
-      out.write("                <tr>\n");
-      out.write("                    <td>");
-      out.print( lAux.getId() );
-      out.write("</td>\n");
-      out.write("                    <td>");
-      out.print( lAux.getNome() );
-      out.write("</td>\n");
-      out.write("                    <td>");
-      out.print( lAux.getApelido() );
-      out.write("</td>\n");
-      out.write("                    <td>");
-      out.print( lAux.getAltura() );
-      out.write("</td>\n");
-      out.write("                    <td>");
-      out.print( lAux.getArtMarcial() );
-      out.write("</td>\n");
-      out.write("                    <td>");
-      out.print( lAux.getContatoEmergencia() );
-      out.write("</td>\n");
-      out.write("                    <td>");
-      out.print( lAux.getCurso() );
-      out.write("</td>\n");
-      out.write("                    <td>");
-      out.print( lAux.getImc() );
-      out.write("</td>\n");
-      out.write("                    <td>");
-      out.print( lAux.getNascimento() );
-      out.write("</td>\n");
-      out.write("                    <td>");
-      out.print( lAux.getPeso() );
-      out.write("</td>\n");
-      out.write("                    \n");
-      out.write("                    <td><a href=\"LutadorServlet?id=");
-      out.print( lAux.getId() );
-      out.write("&op=update\">alterar </a>\n");
-      out.write("                        <a href=\"LutadorServlet?id=");
-      out.print( lAux.getId() );
-      out.write("&op=delete\">deletar</a></td>\n");
-      out.write("                </tr>\n");
-      out.write("            ");
- 
-                }
-            
-      out.write("\n");
-      out.write("        </table>\n");
       out.write("    </body>\n");
       out.write("</html>");
     } catch (Throwable t) {
@@ -149,5 +122,44 @@ public final class Lutadores_jsp extends org.apache.jasper.runtime.HttpJspBase
     } finally {
       _jspxFactory.releasePageContext(_jspx_page_context);
     }
+  }
+
+  private boolean _jspx_meth_ifpe_carrega_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  ifpe:carrega
+    com.devcaotics.controllers.tags.Carrega _jspx_th_ifpe_carrega_0 = (_jspx_resourceInjector != null) ? _jspx_resourceInjector.createTagHandlerInstance(com.devcaotics.controllers.tags.Carrega.class) : new com.devcaotics.controllers.tags.Carrega();
+    _jspx_th_ifpe_carrega_0.setJspContext(_jspx_page_context);
+    _jspx_th_ifpe_carrega_0.setClasse("lutadores");
+    _jspx_th_ifpe_carrega_0.setVar("lut");
+    _jspx_th_ifpe_carrega_0.doTag();
+    return false;
+  }
+
+  private boolean _jspx_meth_ifpe_carregaum_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  ifpe:carregaum
+    com.devcaotics.controllers.tags.CarregaUm _jspx_th_ifpe_carregaum_0 = (_jspx_resourceInjector != null) ? _jspx_resourceInjector.createTagHandlerInstance(com.devcaotics.controllers.tags.CarregaUm.class) : new com.devcaotics.controllers.tags.CarregaUm();
+    _jspx_th_ifpe_carregaum_0.setJspContext(_jspx_page_context);
+    _jspx_th_ifpe_carregaum_0.setClasse("lutadores");
+    _jspx_th_ifpe_carregaum_0.setVar("lutador");
+    _jspx_th_ifpe_carregaum_0.setIndice(10);
+    _jspx_th_ifpe_carregaum_0.doTag();
+    return false;
+  }
+
+  private boolean _jspx_meth_ifpe_tabela_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  ifpe:tabela
+    com.devcaotics.controllers.tags.Tabela _jspx_th_ifpe_tabela_0 = (_jspx_resourceInjector != null) ? _jspx_resourceInjector.createTagHandlerInstance(com.devcaotics.controllers.tags.Tabela.class) : new com.devcaotics.controllers.tags.Tabela();
+    _jspx_th_ifpe_tabela_0.setJspContext(_jspx_page_context);
+    _jspx_th_ifpe_tabela_0.setClasse((java.util.List) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lutadores}", java.util.List.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_ifpe_tabela_0.doTag();
+    return false;
   }
 }

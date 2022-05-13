@@ -21,30 +21,6 @@
       </listener>
     -->
   <tag>
-      <name>mysimpletag</name>
-      <body-content>empty</body-content>
-      <tag-class>com.devcaotics.controllers.tags.SimpleTag</tag-class>    
-  </tag>
-  <tag>
-      <name>bodytag</name>
-      <body-content>scriptless</body-content>
-      <tag-class>com.devcaotics.controllers.tags.TagWithBody</tag-class>
-  </tag>
-  
-  <tag>
-      <name>attributetag</name>
-      <body-content>scriptless</body-content>
-      <tag-class>com.devcaotics.controllers.tags.AttributeTag</tag-class>
-      <attribute>
-          <name>value</name>
-          <required>true></required>
-          <type>String</type>
-          <rtexprvalue>false</rtexprvalue>
-      </attribute>
-  </tag>
-  
-  
-  <tag>
         <name>tabela</name>
         <body-content>empty</body-content>
         <tag-class>com.devcaotics.controllers.tags.Tabela</tag-class>
@@ -55,5 +31,47 @@
             <rtexprvalue>true</rtexprvalue>
         </attribute>
   </tag>
+  
+  <tag>
+      <name>carrega</name>
+      <body-content>empty</body-content>
+      <tag-class>com.devcaotics.controllers.tags.Carrega</tag-class>
+      <attribute>
+          <name>classe</name>
+          <required>true></required>
+          <type>String</type>
+          <rtexprvalue>false</rtexprvalue>
+      </attribute>
+      <attribute>
+          <name>var</name>
+          <required>true</required>
+          <type>String</type>
+          <rtexprvalue>false</rtexprvalue>
+      </attribute>
+  </tag>
+  
+  <tag>
+      <name>carregaum</name>
+      <body-content>empty</body-content>
+      <tag-class>com.devcaotics.controllers.tags.CarregaUm</tag-class>
+      <attribute>
+          <name>classe</name>
+          <required>true</required>
+          <type>String</type>
+          <rtexprvalue>false</rtexprvalue>
+      </attribute>
+      <attribute>
+          <name>var</name>
+          <required>true</required>
+          <type>String</type>
+          <rtexprvalue>false</rtexprvalue>
+      </attribute>
+      <attribute>
+          <name>indice</name>
+          <required>true</required>
+          <type>int</type>
+          <rtexprvalue>false</rtexprvalue>
+      </attribute>
    
+  </tag>
 </taglib>
