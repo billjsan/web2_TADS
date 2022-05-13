@@ -50,8 +50,9 @@ public final class CadastroLutador_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
       out.write("        <title>JSP Page</title>\n");
       out.write("    </head>\n");
-      out.write("    <body>\n");
+      out.write("    \n");
       out.write("       <h1>Cadastro de Lutador</h1>\n");
+      out.write("\n");
       out.write("       <form class=\"form\" method=\"post\"  action=\"LutadorServlet\">\n");
       out.write("            \n");
       out.write("            <table class=\"table\">\n");
@@ -135,7 +136,7 @@ public final class CadastroLutador_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("                </tr>\n");
       out.write("            </table> \n");
       out.write("        </form>\n");
-      out.write("    </body>\n");
+      out.write("    \n");
       out.write("</html>\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){

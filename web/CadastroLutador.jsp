@@ -11,8 +11,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
-    <body>
+    
        <h1>Cadastro de Lutador</h1>
+
        <form class="form" method="post"  action="LutadorServlet">
             
             <table class="table">
@@ -96,5 +97,5 @@
                 </tr>
             </table> 
         </form>
-    </body>
+    
 </html>
