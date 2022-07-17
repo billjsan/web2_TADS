@@ -11,18 +11,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ddae498-74e1-43c7-8cc1-65ea8b998182" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/control/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jspPages/hello.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jspPages/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jspPages/will.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web2-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifpe/WebApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ROOT/RELEASE-NOTES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ROOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ROOT/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ROOT/asf-logo-wide.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ROOT/bg-button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ROOT/bg-middle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ROOT/bg-nav.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ROOT/bg-upper.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ROOT/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ROOT/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ROOT/tomcat.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ROOT/tomcat.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ifpeweb2_war/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ifpeweb2_war/META-INF/war-tracker" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ifpeweb2_war/WEB-INF/classes/com/control/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ifpeweb2_war/WEB-INF/jspPages/hello.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ifpeweb2_war/WEB-INF/jspPages/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ifpeweb2_war/WEB-INF/lib/spring-aop-5.3.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ifpeweb2_war/WEB-INF/lib/spring-beans-5.3.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ifpeweb2_war/WEB-INF/lib/spring-context-5.3.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ifpeweb2_war/WEB-INF/lib/spring-core-5.3.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ifpeweb2_war/WEB-INF/lib/spring-expression-5.3.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ifpeweb2_war/WEB-INF/lib/spring-jcl-5.3.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ifpeweb2_war/WEB-INF/lib/spring-web-5.3.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ifpeweb2_war/WEB-INF/lib/spring-webmvc-5.3.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ifpeweb2_war/WEB-INF/lib/tomcat-annotations-api-10.1.0-M15.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ifpeweb2_war/WEB-INF/lib/tomcat-embed-core-10.1.0-M15.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ifpeweb2_war/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.64/webapps/ifpeweb2_war/WEB-INF/web2-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/control/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifpe/control/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web2-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web2-servlet.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,13 +59,25 @@
       <list>
         <option value="spring-beans.schema" />
         <option value="package.json" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -51,6 +88,14 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadAnnotationsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectId" id="2C4of8z9whfVA606qz81HjLyNkg" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -64,18 +109,25 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/will/Desktop/Web2/web",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.19372822",
-    "project.structure.side.proportion": "0.22800928"
+    "project.structure.side.proportion": "0.22800928",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/jspPages" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="server" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.64" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="corretto-1.8">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="ifpeweb2:war">
           <settings>
-            <option name="CONTEXT_PATH" value="/ifpeweb2_war" />
+            <option name="CONTEXT_PATH" value="" />
           </settings>
         </artifact>
       </deployment>
