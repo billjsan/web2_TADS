@@ -14,6 +14,7 @@ public class IfpeApplication {
 	private EntityManager entityManager = emf.createEntityManager();
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(IfpeApplication.class, args);
 	}
 
