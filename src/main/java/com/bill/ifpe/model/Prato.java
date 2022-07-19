@@ -16,6 +16,9 @@ public class Prato {
     @Column
     private String descricao;
 
+    @Column(length=10000)
+    private String imagem;
+
     public Prato() {
     }
 
@@ -51,6 +54,14 @@ public class Prato {
         this.descricao = descricao;
     }
 
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
+    }
+
     @Override
     public String toString() {
         return "Prato{" +
@@ -58,6 +69,7 @@ public class Prato {
                 ", nome='" + nome + '\'' +
                 ", preco=" + preco +
                 ", descricao='" + descricao + '\'' +
+                ", imagem='" + imagem + '\'' +
                 '}';
     }
 }

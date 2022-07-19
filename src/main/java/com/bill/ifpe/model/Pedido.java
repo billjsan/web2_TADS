@@ -16,6 +16,45 @@ public class Pedido {
     @Column
     private String observacoes;
 
+    @ManyToOne
+    @JoinColumn(name = "user_cpf")
+    private User user;
+
+    @ManyToOne
+    @JoinColumn(name = "pagamento_id")
+    private FormaPagamento pagamento;
+
+    @ManyToOne
+    @JoinColumn(name = "prato_id")
+    private Prato prato;
+
+
+    public Prato getPrato() {
+        return prato;
+    }
+
+    public void setPrato(Prato prato) {
+        this.prato = prato;
+    }
+
+    public FormaPagamento getPagamento() {
+        return pagamento;
+    }
+
+    public void setPagamento(FormaPagamento pagamento) {
+        this.pagamento = pagamento;
+    }
+
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+
     public Pedido() {
     }
 

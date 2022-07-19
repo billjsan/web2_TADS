@@ -2,6 +2,7 @@ package com.bill.ifpe.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Table(name = "user")
@@ -18,18 +19,22 @@ public class User implements Serializable {
     private String email;
     @Column
     private String telefone;
-    @Column(name = "isadmin")
-    private Boolean isAdmin;
+    @Column
+    private String isAdm;
+
+    @OneToMany
+    @JoinColumn(name = "pedidos_id")
+    private List<Pedido> pedidos;
+
+    public List<Pedido> getPedidos() {
+        return pedidos;
+    }
+
+    public void setPedidos(List<Pedido> pedidos) {
+        this.pedidos = pedidos;
+    }
 
     public User() {
-    }
-
-    public Boolean getAdmin() {
-        return isAdmin;
-    }
-
-    public void setAdmin(Boolean admin) {
-        isAdmin = admin;
     }
 
     public String getCpf() {
@@ -72,15 +77,24 @@ public class User implements Serializable {
         this.telefone = telefone;
     }
 
+    public String isAdm() {
+        return isAdm;
+    }
+
+    public void setAdm(String adm) {
+        isAdm = adm;
+    }
+
     @Override
     public String toString() {
         return "User{" +
-                "cpf=" + cpf +
+                "cpf='" + cpf + '\'' +
                 ", name='" + name + '\'' +
                 ", senha='" + senha + '\'' +
                 ", email='" + email + '\'' +
                 ", telefone='" + telefone + '\'' +
-                ", isAdmin=" + isAdmin +
+                ", isAdm='" + isAdm + '\'' +
+                ", pedidos=" + pedidos +
                 '}';
     }
 }

@@ -8,9 +8,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Funcionou</title>
+    <title>Home</title>
 </head>
 <body>
-<h1>Funcionou!</h1>
+<h1>Bem-vindo</h1>
+<a href="${pageContext.request.contextPath}/cadastro">Cadastrar</a>
+<a href="${pageContext.request.contextPath}/login">Login</a>
+
 </body>
 </html>

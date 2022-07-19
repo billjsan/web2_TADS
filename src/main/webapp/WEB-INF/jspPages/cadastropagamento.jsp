@@ -7,10 +7,14 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
-    <title>Title</title>
-  </head>
-  <body>
-  
-  </body>
+<head>
+    <title>TADS Food</title>
+</head>
+<body>
+<h1>Cadastrar forma de pagamento</h1>
+<form method="post" action="/cadastropagamento">
+    Descrição: <input type="text" name="descricao" required/><br/>
+    <input type="submit" value="cadastrar" />
+</form>
+</body>
 </html>
