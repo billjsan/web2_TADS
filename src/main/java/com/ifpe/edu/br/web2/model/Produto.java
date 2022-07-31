@@ -10,8 +10,20 @@ public class Produto {
     private Long id;
     @Column(name = "nome")
     private String nome;
-    @Column(name = "descricao")
+    @Column(name = "descricao", length = 1000)
     private String descricao;
+
+    @ManyToOne
+    @JoinColumn(name = "lote_id")
+    private Lote lote;
+
+    public Lote getLote() {
+        return lote;
+    }
+
+    public void setLote(Lote lote) {
+        this.lote = lote;
+    }
 
     public Produto() {}
 

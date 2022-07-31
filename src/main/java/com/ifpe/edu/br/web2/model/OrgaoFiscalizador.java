@@ -10,7 +10,7 @@ public class OrgaoFiscalizador {
     private Long id;
     @Column(name = "nome")
     private String nome;
-    @Column(name = "descricao")
+    @Column(name = "descricao", length = 1000)
     private String descricao;
 
     public OrgaoFiscalizador() {}

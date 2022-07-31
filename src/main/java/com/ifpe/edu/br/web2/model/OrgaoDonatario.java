@@ -16,7 +16,7 @@ public class OrgaoDonatario {
     private String telefone;
     @Column(name = "horaFuncionamento")
     private String horaFuncionamento;
-    @Column(name = "descricao")
+    @Column(name = "descricao", length = 1000)
     private String descricao;
 
     public OrgaoDonatario() {}
