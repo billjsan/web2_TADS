@@ -9,6 +9,14 @@ Esse README mostra somente a parte do fronte-end
 O front-end da atividade foi desenvolvida com Bootstrap, utilizando também html-css-js, para requisições para consumir a API iremos usar Ajax do Jquery.
 
 
+O back-end do front foi desenvolvido em Python Django.
+
+
+## Gerar Secret Key do django
+```
+echo "export SECRET_KEY='$(openssl rand -hex 40)'" > .DJANGO_SECRET_KEY
+source .DJANGO_SECRET_KEY
+```
 ## Requisitos da página do administrador
 - [x] Página inicial do administrador
 - [ ] Página para criar usuários
