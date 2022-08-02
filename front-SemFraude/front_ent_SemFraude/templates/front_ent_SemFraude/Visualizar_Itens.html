@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <script  src="https://code.jquery.com/jquery-3.1.1.min.js">
+
+
+</script>
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+
+
+
+
+    <script>
+
+
+
+      function pegar_titulo(id) {
+
+var request = $.ajax({
+url: "/example2/",
+type: "GET",
+data: { csrfmiddlewaretoken: '{{ csrf_token }}' },
+});
+
+request.done(function(msg) {
+
+myBooks = JSON.parse(request.responseText);
+var col = [];
+
+var salvar_id_posicao = 0;
+        for (var i = 0; i < myBooks.length; i++) {
+            for (var key in myBooks[i]) {
+                if (col.indexOf(key) === -1) {
+                    col.push(key);
+                }
+            }
+        }
+
+        // Create a table.
+        var table = document.createElement("table");
+                table.id = "table";
+
+        table.className = "table table-striped";
+        // Create table header row using the extracted headers above.
+        var tr = table.insertRow(-1);                   // table row.
+
+        for (var i = 0; i < col.length; i++) {
+            var th = document.createElement("th");      // table header.
+            th.innerHTML = col[i];
+            tr.appendChild(th);
+
+            if (col[i] === "id"){
+            alert(col[i]);
+            salvar_id_posicao = i;
+            alert(salvar_id_posicao);
+
+            }
+
+        }
+
+        // add json data to the table as rows.
+        for (var i = 0; i < myBooks.length; i++) {
+
+            tr = table.insertRow(-1);
+
+            for (var j = 0; j < col.length; j++) {
+                var tabCell = tr.insertCell(-1);
+                tabCell.innerHTML = myBooks[i][col[j]];
+                if (j === salvar_id_posicao)
+                {
+                tabCell.hrfe = "{{ classe }}?"+ myBooks[i][col[j]]
+                }
+            }
+        }
+
+        // Now, add the newly created table with json data, to a container.
+        var divShowData = document.getElementById('showData');
+        divShowData.innerHTML = "";
+        divShowData.appendChild(table);
+});
+
+request.fail(function(jqXHR, textStatus) {
+alert( "Request failed: " + textStatus );
+});
+}
+ </script>
+
+
+
+    <style>
+
+.navbar {
+    padding: 0px 25px 15px  15px 20px;
+}
+
+#painel {
+    padding: 20px 25px 15px  ;
+}
+
+.painel {
+    padding: 20px 25px 15px  ;
+}
+
+
+
+html, body {
+    height: 100%;
+}
+    </style>
+
+
+  </head>
+  <body>
+
+
+<div >
+    <nav  class="navbar  navbar-dark bg-primary" >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <h3 >Administração do Site</h3>
+        </a>
+
+        <a class="navbar-brand" href="#">
+          <h5>VER O SITE</h5>
+        </a>
+      </div>
+    </nav>
+  </div>
+<div class="painel">
+    <div class="alert alert-light" role="alert">
+           <h2>Administração do Site</h2>
+
+          </div>
+          <div class="alert alert-primary" role="alert">
+  <a href="/">Home</a>/ {{ classe }}
+</div>
+
+
+  <div class="alert alert-dark" role="alert">
+  Objeto
+</div>
+
+
+  </div>
+
+    <div id="painel" class=" text-left">
+      <div class="row">
+        <div class="col" >
+
+          <h2>{{ classe }}</h2>
+
+          <script>
+
+
+          </script>
+
+         Search: <input  onclick="filtrar()"class="form-control" type="text" id="search" placeholder="Type to search">
+          <p id='showData'></p>
+
+
+
+
+
+          <div>
+
+ <table class="table table-striped" id="excelDataTable" border="1">
+  </table>
+
+          </div>
+        </div>
+
+        <div class="col">
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+
+
+      </div>
+
+
+
+<script>
+
+
+pegar_titulo(1);
+
+
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+<script>
+function filtrar(){
+var $rows = $('#table tr');
+$('#search').keyup(function() {
+    var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+
+    $rows.show().filter(function() {
+        var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+        return !~text.indexOf(val);
+    }).hide();
+});
+}
+
+
+
+</script>
