@@ -1,0 +1,27 @@
+{
+  "dataEntrega": "2022-02-20",
+  "observacao": "Sou um fiscal",
+
+  "orgaoDonatario": {
+    "id": 1,
+    "nome":"Donatário",
+    "endereco":"rua bela demais",
+    "telefone":"12345678",
+    "horaFuncionamento" :"fechou e abriu",
+    "descricao": "isso é um outro teste"
+  },
+
+  "orgaoFiscalizador": {
+    "id" :1,
+    "nome": "O fiscal",
+    "descricao": "Sou um fiscal"
+  },
+
+  "produtoes" : [
+    {
+      "id" : 1,
+      "nome" : "o fiscal",
+      "descricao" : "sou um fiscal"
+    }
+  ]
+}
