@@ -9,9 +9,25 @@ from django.shortcuts import render
 import json
 from django.views.decorators.csrf import csrf_exempt
 
-
 def index(request):
     return render(request, "front_ent_SemFraude/index.html")
+def lote(request):
+    return render(request, "front_ent_SemFraude/lote.html")
+
+
+def orgaoDonatario(request):
+    return render(request, "orgaoDonatario/orgaoDonatario.html")
+
+def orgaoFiscalizador(request):
+    return render(request, "front_ent_SemFraude/orgaoFiscalizador.html")
+
+def produto(request):
+    return render(request, "front_ent_SemFraude/produto.html")
+
+
+
+
+
 
 def visualizar(request,classe):
     return render(request, "front_ent_SemFraude/Visualizar_Itens.html",{"classe":classe})

@@ -15,6 +15,33 @@
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 
 
+            <script>
+
+          function rodar() {
+              var formData = new FormData();
+
+
+              var nome = document.getElementsByName("nome")[0].value;
+              var descricao =document.getElementsByName("descricao")[0].value;
+
+
+
+
+              let _data = {
+                  "nome": nome,
+                  "descricao": descricao
+              }
+
+
+fetch("http://localhost:8080/produto/", {
+  method: "POST",
+  headers: {'Content-Type': 'application/json'},
+  body: JSON.stringify(_data)
+}).then(res => {
+  console.log("Request complete! response:", res);
+});
+          }
+            </script>
 
 
     <script>
@@ -24,7 +51,7 @@
       function pegar_titulo(id) {
 
 var request = $.ajax({
-url: "/example2/",
+url: "http://localhost:8080/produto/",
 type: "GET",
 data: { csrfmiddlewaretoken: '{{ csrf_token }}' },
 });
@@ -66,9 +93,7 @@ var salvar_id_posicao = 0;
 
             container.appendChild(input);
             if (col[i] === "id"){
-            alert(col[i]);
             salvar_id_posicao = i;
-            alert(salvar_id_posicao);
 
             }
 
@@ -174,6 +199,24 @@ html, body {
           <p id='showData'></p>
 
 
+
+            <p></p>
+            <hr>
+
+
+            <h2>Produto</h2>
+            <form name="post">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Produto</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="nome" aria-describedby="Nome">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Descrição</label>
+    <input type="text" name="descricao" class="form-control" id="exampleInputPassword1">
+  </div>
+
+  <button  class="btn btn-primary" onclick="rodar()">Submit</button>
+</form>
 
 
 

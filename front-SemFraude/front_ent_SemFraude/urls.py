@@ -7,4 +7,9 @@ urlpatterns = [
     path("example/", views.json_example, name="json"),
     path("example2/", views.json_example2, name="json2"),
 
+    path("lote/", views.lote),
+    path("orgaoDonatario/", views.orgaoDonatario),
+    path("orgaoFiscalizador/", views.orgaoFiscalizador),
+    path("produto/", views.produto),
+
 ]
