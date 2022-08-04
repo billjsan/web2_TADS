@@ -41,6 +41,21 @@ fetch("http://localhost:8080/produto/", {
   console.log("Request complete! response:", res);
 });
           }
+
+
+
+          function deletar(id){
+
+
+              fetch("http://localhost:8080/produto/"+ id + "/", {
+  method: "DELETE",
+  headers: {'Content-Type': 'application/json'},
+}).then(res => {
+  console.log("Request complete! response:", res);
+});
+          }
+
+
             </script>
 
 
@@ -99,6 +114,8 @@ var salvar_id_posicao = 0;
 
         }
 
+        var container = document.getElementById('post');
+
         // add json data to the table as rows.
         for (var i = 0; i < myBooks.length; i++) {
 
@@ -109,7 +126,18 @@ var salvar_id_posicao = 0;
                 tabCell.innerHTML = myBooks[i][col[j]];
                 if (j === salvar_id_posicao)
                 {
-                tabCell.innerHTML = "{{ classe }}?"+ myBooks[i][col[j]];
+
+
+                                            container.appendChild(p);
+
+                  document.getElementById("gambiarra").value = myBooks[i][col[j]];
+
+tabCell.addEventListener("click", function(event){
+  event.preventDefault();
+    deletar(document.getElementById("gambiarra").value);
+ window.location.reload()
+});
+                //tabCell.onclick = "{{ classe }}?"+ myBooks[i][col[j]];
                 }
             }
         }
@@ -237,9 +265,9 @@ html, body {
 
     <div class="container">
 
-<h2>Criar novo objeto</h2>
+<h2 hidden>Criar novo objeto</h2>
 
-        <div id="post"></div>
+        <div id="post" hidden></div>
       </div>
 
 
@@ -274,3 +302,24 @@ $('#search').keyup(function() {
 
 
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<input hidden id="gambiarra">
