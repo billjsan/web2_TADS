@@ -1,4 +1,4 @@
-Visualizar_Itens.html<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -15,6 +15,68 @@ Visualizar_Itens.html<!doctype html>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 
 
+            <script>
+
+          function rodar() {
+              var formData = new FormData();
+
+
+              var nome = document.getElementsByName("nome")[0].value;
+              var descricao = document.getElementsByName("descricao")[0].value;
+              var codigo = document.getElementsByName("codigo")[0].value;
+
+
+              if (document.getElementsByName("editar_teste")[0].checked === true) {
+
+                   let _data = {
+                       "codigo":codigo,
+                      "nome": nome,
+                      "descricao": descricao
+                  }
+
+
+                  fetch("http://localhost:8080/lote/", {
+                      method: "PUT",
+                      headers: {'Content-Type': 'application/json'},
+                      body: JSON.stringify(_data)
+                  }).then(res => {
+                      console.log("Request complete! response:", res)
+                      alert(res);
+                  });
+              }
+
+              else {
+
+                  let _data = {
+                      "nome": nome,
+                      "descricao": descricao
+                  }
+
+
+                  fetch("http://localhost:8080/lote/", {
+                      method: "POST",
+                      headers: {'Content-Type': 'application/json'},
+                      body: JSON.stringify(_data)
+                  }).then(res => {
+                      console.log("Request complete! response:", res);
+                  });
+              }
+          }
+
+
+          function deletar(id){
+
+
+              fetch("http://localhost:8080/lote/"+ id + "/", {
+  method: "DELETE",
+  headers: {'Content-Type': 'application/json'},
+}).then(res => {
+  console.log("Request complete! response:", res);
+});
+          }
+
+
+            </script>
 
 
     <script>
@@ -24,7 +86,7 @@ Visualizar_Itens.html<!doctype html>
       function pegar_titulo(id) {
 
 var request = $.ajax({
-url: "/example2/",
+url: "http://localhost:8080/lote/",
 type: "GET",
 data: { csrfmiddlewaretoken: '{{ csrf_token }}' },
 });
@@ -66,27 +128,52 @@ var salvar_id_posicao = 0;
 
             container.appendChild(input);
             if (col[i] === "id"){
-            alert(col[i]);
             salvar_id_posicao = i;
-            alert(salvar_id_posicao);
 
             }
 
         }
+var th = document.createElement("th");      // table header.
+            th.innerHTML = "Excluir";
+            tr.appendChild(th);
+
+
+var th = document.createElement("th");      // table header.
+            th.innerHTML = "Editar";
+            tr.appendChild(th);
+        var container = document.getElementById('post');
 
         // add json data to the table as rows.
         for (var i = 0; i < myBooks.length; i++) {
 
             tr = table.insertRow(-1);
-
             for (var j = 0; j < col.length; j++) {
                 var tabCell = tr.insertCell(-1);
                 tabCell.innerHTML = myBooks[i][col[j]];
                 if (j === salvar_id_posicao)
                 {
-                tabCell.innerHTML = "{{ classe }}?"+ myBooks[i][col[j]];
+
+
+                                            container.appendChild(p);
+
+                  document.getElementById("gambiarra").value = myBooks[i][col[j]];
+
+tabCell.addEventListener("click", function(event){
+  event.preventDefault();
+    deletar(document.getElementById("gambiarra").value);
+ window.location.reload()
+});
+                //tabCell.onclick = "{{ classe }}?"+ myBooks[i][col[j]];
                 }
             }
+            var tabCell = tr.insertCell(-1);
+                tabCell.innerHTML = "excluir";
+
+                var tabCell = tr.insertCell(-1);
+                tabCell.innerHTML = "editar";
+
+
+
         }
 
         // Now, add the newly created table with json data, to a container.
@@ -175,6 +262,30 @@ html, body {
 
 
 
+            <p></p>
+            <hr>
+
+
+            <h2>Produto</h2>
+            <form name="post">
+
+<input type="checkbox" name="editar_teste">
+                 <div class="mb-3" >
+    <label for="exampleInputEmail1" class="form-label">Código</label>
+    <input type="text" class="form-control" id="codigo" name="codigo" aria-describedby="Nome">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Produto</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="nome" aria-describedby="Nome">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Descrição</label>
+    <input type="text" name="descricao" class="form-control" id="exampleInputPassword1">
+  </div>
+
+  <button  class="btn btn-primary" onclick="rodar()">Submit</button>
+</form>
+
 
 
           <div>
@@ -194,9 +305,9 @@ html, body {
 
     <div class="container">
 
-<h2>Criar novo objeto</h2>
+<h2 hidden>Criar novo objeto</h2>
 
-        <div id="post"></div>
+        <div id="post" hidden></div>
       </div>
 
 
@@ -231,3 +342,24 @@ $('#search').keyup(function() {
 
 
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<input hidden id="gambiarra">
