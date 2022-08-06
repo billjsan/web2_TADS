@@ -61,7 +61,7 @@ public class PostController {
             return "Produto cadastrado com sucesso!";
 
         } catch (Exception e) {
-            return "não foi possível cadastrar o produto";
+            return e.getMessage(); //"não foi possível cadastrar o produto";
         }
     }
 

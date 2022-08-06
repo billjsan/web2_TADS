@@ -14,16 +14,8 @@ public class Produto {
     private String descricao;
 
     @ManyToOne
-    @JoinColumn(name = "lote_id")
+    @JoinColumn(name = "lote_fk", nullable = true)
     private Lote lote;
-
-    public Lote getLote() {
-        return lote;
-    }
-
-    public void setLote(Lote lote) {
-        this.lote = lote;
-    }
 
     public Produto() {}
 
@@ -51,12 +43,21 @@ public class Produto {
         this.descricao = descricao;
     }
 
+    public Lote getLote() {
+        return lote;
+    }
+
+    public void setLote(Lote lote) {
+        this.lote = lote;
+    }
+
     @Override
     public String toString() {
         return "Produto{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", descricao='" + descricao + '\'' +
+                ", lote=" + lote +
                 '}';
     }
 }

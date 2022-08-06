@@ -90,7 +90,7 @@ public class GetController {
         return orgaoFiscalizador;
     }
 
-    @GetMapping("/fiscalizador")
+    @GetMapping("/fiscalizadores")
     public List<OrgaoFiscalizador> getFiscalizador() {
 
         return fiscalizadorRepository.findAll();
@@ -112,7 +112,7 @@ public class GetController {
         return produto;
     }
 
-    @GetMapping("/produto")
+    @GetMapping("/produtos")
     public List<Produto> getProduto() {
 
         return

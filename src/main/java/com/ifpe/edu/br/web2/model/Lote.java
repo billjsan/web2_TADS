@@ -1,9 +1,7 @@
 package com.ifpe.edu.br.web2.model;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 public class Lote {
@@ -22,10 +20,9 @@ public class Lote {
     @OneToOne(optional = false, orphanRemoval = true)
     @JoinColumn(name = "orgao_fiscalizador_id", nullable = false)
     private OrgaoFiscalizador orgaoFiscalizador;
-    @OneToMany(mappedBy = "lote", orphanRemoval = true)
-    private List<Produto> produtoes = new ArrayList<>();
 
-    public Lote() {}
+    public Lote() {
+    }
 
     public Long getId() {
         return id;
@@ -67,14 +64,6 @@ public class Lote {
         this.orgaoFiscalizador = orgaoFiscalizador;
     }
 
-    public List<Produto> getProdutoes() {
-        return produtoes;
-    }
-
-    public void setProdutoes(List<Produto> produtoes) {
-        this.produtoes = produtoes;
-    }
-
     @Override
     public String toString() {
         return "Lote{" +
@@ -83,7 +72,6 @@ public class Lote {
                 ", observacao='" + observacao + '\'' +
                 ", orgaoDonatario=" + orgaoDonatario +
                 ", orgaoFiscalizador=" + orgaoFiscalizador +
-                ", produtoes=" + produtoes +
                 '}';
     }
 }

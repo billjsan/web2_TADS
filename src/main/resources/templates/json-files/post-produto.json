@@ -1,0 +1,22 @@
+{
+    "nome": "Galaxy S30",
+    "descricao": "Sou um outro Galaxy",
+    "lote": {
+        "id": 3,
+        "dataEntrega": "2022-03-20T00:00:00.000+00:00",
+        "observacao": "Cigarro HOLWOOD",
+        "orgaoDonatario": {
+            "id": 2,
+            "nome": "Receita Federal",
+            "endereco": "rua bela demais",
+            "telefone": "12345678",
+            "horaFuncionamento": "8 às 16",
+            "descricao": "É a receita federal, pai"
+        },
+        "orgaoFiscalizador": {
+            "id": 1,
+            "nome": "FBI",
+            "descricao": "hahahha"
+        }
+    }
+}

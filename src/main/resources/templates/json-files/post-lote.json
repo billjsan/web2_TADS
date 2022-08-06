@@ -1,27 +1,19 @@
 {
   "dataEntrega": "2022-02-20",
-  "observacao": "Sou um fiscal",
+  "observacao": "Cigarro GIFT",
 
   "orgaoDonatario": {
-    "id": 1,
-    "nome":"Donatário",
-    "endereco":"rua bela demais",
-    "telefone":"12345678",
-    "horaFuncionamento" :"fechou e abriu",
-    "descricao": "isso é um outro teste"
+    "id": 2,
+    "nome": "Receita Federal",
+    "endereco": "rua bela demais",
+    "telefone": "12345678",
+    "horaFuncionamento": "8 às 16",
+    "descricao": "É a receita federal, pai"
   },
 
   "orgaoFiscalizador": {
-    "id" :1,
-    "nome": "O fiscal",
-    "descricao": "Sou um fiscal"
-  },
-
-  "produtoes" : [
-    {
-      "id" : 1,
-      "nome" : "o fiscal",
-      "descricao" : "sou um fiscal"
-    }
-  ]
+    "id": 3,
+    "nome": "Polícia Civil",
+    "descricao": "vai saber né?"
+  }
 }
