@@ -10,6 +10,7 @@ import com.ifpe.edu.br.web2.model.repo.LoteRepository;
 import com.ifpe.edu.br.web2.model.repo.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -30,6 +31,7 @@ public class GetController {
     @Autowired
     private ProdutoRepository produtoRepository;
 
+    @CrossOrigin("*")
     @GetMapping("/lote")
     public Lote getLote(@RequestParam("id") Long id) {
 
@@ -46,12 +48,14 @@ public class GetController {
         return lote;
     }
 
+    @CrossOrigin("*")
     @GetMapping("/lotes")
     public List<Lote> getLotes() {
 
         return loteRepository.findAll();
     }
 
+    @CrossOrigin("*")
     @GetMapping("/donatario")
     public OrgaoDonatario getOrgaoDonatario(@RequestParam("id") Long id) {
 
@@ -68,12 +72,14 @@ public class GetController {
         return orgaoDonatario;
     }
 
+    @CrossOrigin("*")
     @GetMapping("/donatarios")
     public List<OrgaoDonatario> getDonatarios() {
 
         return donatarioRepository.findAll();
     }
 
+    @CrossOrigin("*")
     @GetMapping("/fiscalizador")
     public OrgaoFiscalizador getOrgaoFiscalizador(@RequestParam("id") Long id) {
 
@@ -90,12 +96,14 @@ public class GetController {
         return orgaoFiscalizador;
     }
 
+    @CrossOrigin("*")
     @GetMapping("/fiscalizadores")
     public List<OrgaoFiscalizador> getFiscalizador() {
 
         return fiscalizadorRepository.findAll();
     }
 
+    @CrossOrigin("*")
     @GetMapping("/produto")
     public Produto getProduto(@RequestParam("id") Long id) {
 
@@ -112,6 +120,7 @@ public class GetController {
         return produto;
     }
 
+    @CrossOrigin("*")
     @GetMapping("/produtos")
     public List<Produto> getProduto() {
 

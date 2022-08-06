@@ -10,6 +10,7 @@ import com.ifpe.edu.br.web2.model.repo.LoteRepository;
 import com.ifpe.edu.br.web2.model.repo.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,6 +30,7 @@ public class PutController {
     @Autowired
     private ProdutoRepository produtoRepository;
 
+    @CrossOrigin("*")
     @PutMapping("/lote")
     public String updateLote(@RequestBody Lote lote) {
 
@@ -47,6 +49,7 @@ public class PutController {
         }
     }
 
+    @CrossOrigin("*")
     @PutMapping("/donatario")
     public String updateDonatario(@RequestBody OrgaoDonatario donatario) {
 
@@ -65,6 +68,7 @@ public class PutController {
         }
     }
 
+    @CrossOrigin("*")
     @PutMapping("/fiscalizador")
     public String updateFiscalizador(@RequestBody OrgaoFiscalizador fiscalizador) {
 
@@ -83,6 +87,7 @@ public class PutController {
         }
     }
 
+    @CrossOrigin("*")
     @PutMapping("/produto")
     public String updateFiscalizador(@RequestBody Produto produto) {
 

@@ -9,6 +9,7 @@ import com.ifpe.edu.br.web2.model.repo.FiscalizadorRepository;
 import com.ifpe.edu.br.web2.model.repo.LoteRepository;
 import com.ifpe.edu.br.web2.model.repo.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,6 +29,7 @@ public class DeleteController {
     @Autowired
     private ProdutoRepository produtoRepository;
 
+    @CrossOrigin("*")
     @DeleteMapping("/lote")
     public String deleteLote(@RequestParam("id") Long id) {
 
@@ -48,6 +50,7 @@ public class DeleteController {
         return "lote removido com sucesso";
     }
 
+    @CrossOrigin("*")
     @DeleteMapping("/produto")
     public String deleteProduto(@RequestParam("id") Long id) {
 
@@ -68,6 +71,7 @@ public class DeleteController {
         return "produto removido com sucesso";
     }
 
+    @CrossOrigin("*")
     @DeleteMapping("/donatario")
     public String deleteDonatario(@RequestParam("id") Long id) {
 
@@ -88,6 +92,7 @@ public class DeleteController {
         return "donatario removido com sucesso";
     }
 
+    @CrossOrigin("*")
     @DeleteMapping("/fiscalizador")
     public String deleteFiscalizador(@RequestParam("id") Long id) {
 

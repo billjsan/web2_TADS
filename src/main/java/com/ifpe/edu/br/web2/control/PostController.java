@@ -23,6 +23,7 @@ public class PostController {
     @Autowired
     private ProdutoRepository produtoRepository;
 
+    @CrossOrigin("*")
     @PostMapping("/donatario")
     public String addDonatario(@RequestBody OrgaoDonatario orgaoDonatario) {
 
@@ -37,6 +38,7 @@ public class PostController {
         }
     }
 
+    @CrossOrigin("*")
     @PostMapping("/fiscalizador")
     public String addfiscalizador(@RequestBody OrgaoFiscalizador orgaoFiscalizador) {
 
@@ -51,6 +53,7 @@ public class PostController {
         }
     }
 
+    @CrossOrigin("*")
     @PostMapping("/produto")
     public String addProduto(@RequestBody Produto produto) {
 
@@ -65,6 +68,7 @@ public class PostController {
         }
     }
 
+    @CrossOrigin("*")
     @PostMapping("/lote")
     public String addLote(@RequestBody Lote lote) {
 
@@ -79,12 +83,14 @@ public class PostController {
         }
     }
 
+    @CrossOrigin("*")
     @PutMapping("/")
     public String put() {
 
         return "put";
     }
 
+    @CrossOrigin("*")
     @DeleteMapping("/")
     public String delete() {
 
